@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>{% block title %}Добро пожаловать{% endblock %}</title>
+	<link rel="shortcut icon" href="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/200px-Heart_coraz%C3%B3n.svg.png" type="image/x-icon">
+	<link href="static/css/base.css" rel="stylesheet" type="text/css">
+	{% block style %}{% endblock %}
+
+
+</head>
+
+<body>
+ <div class="header">
+
+  <p class="logo">ТАНЦЫ</p>
+  <nav class="navigation">
+	 <ul>
+	  <li><a href="#" class="current">МАСТЕР-КЛАССЫ</a></li>
+	  <li><a href="#">УСЛУГИ И ЦЕНЫ</a></li>
+	  <li><a href="#">ПЕДАГОГИ И СТИЛИ</a></li>
+	  <li><a href="#">РАСПИСАНИЕ</a></li>
+	  <li><a href="#">НАЧИНАЮЩИМ</a></li>
+	  <li><a href="#">ДНЕВНЫЕ ЗАНЯТИЯ</a></li>
+	  <li><a href="#">ДЕТЯМ</a></li>
+    </ul>
+  </nav>
+
+<div class="right_block">
+<p><a href="{% url 'login' %}">Вход</a></p>
+	<p class="tel">8(343)111-11-11</p></div>
+</div>
+
+{% block content %}{% endblock %}
+
+
+<footer >
+	 <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Правила посещения</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+		<p class="logo">ТАНЦЫ</p>
+		<p>
+Общество с ограниченной ответственностью «ТАНЦЫ» г. Екатеринбург ИНН 7704347330 ОГРН 1167746212985 КПП 770401001</br>
+ОКПО 00141373 ОКТМО 45383000000 Адрес местонахождения 119435, г. Екатеринбург, Б. Саввинский пер., д.12, стр.8</br>
+Почтовый адрес 119435, г. Москва, Б. Саввинский пер., д.12, стр.8 Генеральный директор Полухин Александр Ильич</br>
+Расчетный счет (руб.) 40702810502330002624, Альфа Банк (АО), г. Екатеринбург, Кор. счет 30101810200000000593 БИК 044525593</br>
+Тел/факс 8 (495) 109-05-05</p>
+		<p>© All Right Reserved. ТАНЦЫ, ООО "ТАНЦЫ" 2021</p>
+	 </footer>
+</body>
+
+</html>
+
+
+

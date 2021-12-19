@@ -1,0 +1,29 @@
+{% extends 'Student/StudentAcc.html' %}
+{% block title %}Абонемент{% endblock %}
+
+{% block style %}
+<style>
+    li{
+    list-style:none;
+
+    }
+    .ab li{
+    font-size:20px;
+    padding:0.5em;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container rounded" style="background:#D1D1D1;padding:1em;">
+<h1 style="text-align:center;">Абонемент</h1>
+    <ul class="ab">
+         {% for i in ab %}
+        <li>Владелец: {{i.student_id}}</li>
+        <li>Группа: {{i.group_id}}</li>
+        <li>Количество занятий всего: {{i.number_of_lessons}}</li>
+        <li>Использованно занятий: {{ac}}</li>
+
+          {% endfor %}
+    </ul>
+</div>
+{% endblock  %}

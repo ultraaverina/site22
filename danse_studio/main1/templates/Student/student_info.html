@@ -1,0 +1,45 @@
+{% extends 'Student/StudentAcc.html' %}
+{% block title %}Персональная информация{% endblock %}
+
+{% block content %}
+ {% for person in user %}
+<div class="container">
+     <table class="table table-striped">
+  <thead>
+
+  </thead>
+  <tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Фамилия:</th>
+      <td>{{person.surname}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Имя:</th>
+      <td>{{person.name}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Отчество:</th>
+      <td>{{person.middle_name}}</td>
+    </tr>
+   <tr>
+      <th scope="row">Номер телефона:</th>
+      <td>{{person.number}}</td>
+    </tr>
+  <tr>
+      <th scope="row">Дата рождения:</th>
+      <td>{{person.date_of_birth}}</td>
+    </tr>
+  <tr>
+      <th scope="row">Уровень подготовки:</th>
+      <td>{{person.skill_level}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+  {% endfor %}
+{% endblock  %}

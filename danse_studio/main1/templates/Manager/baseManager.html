@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css"  type="text/css">
+    <link rel="stylesheet" href="static/css/BaseAccUser.css"  type="text/css" >
+    {% block style %}{% endblock %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Танцы{% endblock %}</title>
+     <link rel="shortcut icon" href="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/200px-Heart_coraz%C3%B3n.svg.png" type="image/x-icon">
+</head>
+<body>
+<div class="header">
+ <div class="placeholder">
+     <p class="logo" style="align-self:center;">ТАНЦЫ</p>
+    <div class="hello_text" style="align-self:center;"><i>Танцы — перпендикулярное выражение горизонтальных желаний</i></div>
+     <div ><img  src="static/img/qwa.png" alt="Лого"></div>
+
+ </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary text-white" style="margin:0">
+     <a href="{%url 'logout'%}" class="btn btn-outline-light" role="button" >Выход</a>
+  {% block back %}{% endblock %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    </div>
+  </div>
+    {% block search %}{% endblock %}
+</nav>
+<div class="main_space" style="display:flex;">
+   <div class="wrapper" >
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header bg-secondary ">
+                </div>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="{%url 'students_list'%}">Студенты</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'teachers_list'%}">Педагоги</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'visits_list'%}">Журнал</a>
+                    </li>
+
+                    <li>
+                        <a href="{%url 'subscription_list'%}">Абонементы</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'timetable_list'%}">Расписание</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+       </div>
+    <div style="padding:0 3em;" class="container-fluid">{%block content%}{% endblock %}</div>
+</div>
+<script>{% block script %}{% endblock %}</script>
+</body>
+</html>

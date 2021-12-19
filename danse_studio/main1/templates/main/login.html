@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Войдите а систему</title>
+    <link rel="shortcut icon" href="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/200px-Heart_coraz%C3%B3n.svg.png" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   <title>Войти в систему</title>
+
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/login.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" method="post" name="login_user">
+      {% csrf_token %}
+
+      <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP1lrPrcJ1DiRlM_UFrcUZH1oXKDy6rhfsXQ&usqp=CAU" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Войдите в систему</h1>
+
+      <label  class="sr-only">Login</label>
+
+      <input class="form-control " type="login" name="login" placeholder="Логин"><br>
+      <label  class="sr-only">Пароль</label>
+      <input type="password" class="form-control" style = "margin-bottom:10px;" name="password" placeholder="Пароль"><br>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+      <p class="mt-5 mb-3 text-muted">Танцы</p>
+    </form>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

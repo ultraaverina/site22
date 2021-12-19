@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+   <div>{{person}}</div>
+{% for i in person%}
+
+<h1>{{i.name}}</h1>
+<h2>{{i.group}}</h2>
+{% endfor%}
+{% endblock%}
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>Студия танцев</title>
+
+	<link href="static/index.css" rel="stylesheet" type="text/css">
+
+
+</head>
+

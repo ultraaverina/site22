@@ -1,0 +1,30 @@
+{% extends 'Manager/baseManager.html' %}
+{% block title %}Педагоги{% endblock %}
+{%block content%}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Фамилия</th>
+      <th scope="col">Имя</th>
+      <th scope="col">Отчество</th>
+      <th scope="col">Номер телефона</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for person in person %}
+
+  <tr>
+    <th scope="row">{{ forloop.counter }}</th>
+
+      <td>{{person.surname}}</td>
+      <td>{{person.name}} </td>
+      <td>{{person.middle_name}}</td>
+      <td>{{person.number}}</td>
+
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

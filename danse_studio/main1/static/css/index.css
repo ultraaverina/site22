@@ -1,0 +1,258 @@
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    margin: 0;
+}
+li{
+	list-style:none;
+}
+.header{
+	display:flex;
+	justify-content:space-between;
+	padding: 0 1em;
+	color: #ffffff;
+    font-size: 1em;
+   font-weight: bold;
+	background:black;
+	align-items:center;
+
+
+
+}
+
+.navigation ul{
+	display:flex;
+
+
+}
+.navigation li{
+	padding:0 0.3em;
+
+}
+.navigation a{
+	color: #ffffff;
+	text-decoration:none;
+	padding:0 0.5em;
+
+}
+.logo{
+
+	font-size: 2em;
+
+
+}
+
+.banner {
+  color: white;
+  background: url('https://dancebook.ru/wp-content/uploads/2019/11/balnye-tancy-shkoly-v-moskve-na-dancebook.ru_.jpg') top left/cover no-repeat;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstBt{
+	display:flex;
+	color: #ffffff;
+	background:black;
+	text-align:center;
+	flex-direction: column;
+	padding:1.5em 0;
+}
+.firstBt p{
+	font-family: "DIN",Arial,sans-serif;
+	font-size: 1.5em;
+	color:#cccccc;
+
+}
+.header a{
+	color: #ffffff;
+}
+
+.buttons {
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+
+
+}
+.buttons div{
+	padding:1em;
+	align-items:center;
+	font-size: 1.5em;
+	background:#cccccc;
+    width:15em;
+	margin:1em;
+	border-radius:0.7em;
+}
+
+.lm_col{
+	background:#DCFA70;
+}
+.cards_titel{
+	text-align:center;
+	margin:1.5em 0;
+	font-size:1.7em;
+}
+
+.img1{
+	height:20em;
+	width:20em;
+	background:red;
+}
+.img1 img{
+	width:100%;
+}
+
+
+.cards{
+
+	display:flex;
+	justify-content:center;
+}
+
+.card{
+	display:flex;
+	width:20em;
+
+	flex-direction:column;
+	margin:0 2em;
+
+
+}
+
+.titels{
+
+	font-weight: bold;
+	font-size:1.27em;
+	margin:1em 0;
+}
+.card .text{
+	font-size:0.9em;
+	color:#4E4E4E;
+	    font-family: 'DIN',Arial,sans-serif;
+		line-height:1.5em;
+
+}
+.content{
+	height:10em;
+
+}
+
+a{
+	text-decoration:none;
+	color:black;
+}
+.bt_cards{
+
+	display: inline-block;
+    font-family: 'DIN',Arial,sans-serif;
+	text-indent: initial;
+	text-align:center;
+	font-size:1em;
+	width:7em;
+	background-color:#b5b1b2;
+	border-radius:0.4em;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px #fff;
+	padding:0.3em;
+}
+
+.secbt{
+	padding:3em;
+	margin:3em 0;
+	display:flex;
+	justify-content:space-around;
+	background:	#DCFA70;
+}
+.secbt .btn{
+	background:white;
+	border-radius:0.5em;
+	font-size:1em;
+	padding:1em;
+	font-weight:bold;
+}
+
+.secbt a{
+	padding:0;
+}
+.sec_tit{
+	font-size:2.5em;
+	font-weight:bold;
+
+}
+
+
+.styles{
+	margin: 0 23em;
+	margin-bottom:3em;
+}
+.styles h1{
+	margin-left:0.5em;
+}
+.cards1{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+  flex-wrap: wrap;
+
+}
+.cards1 div{
+	text-align:center;
+	padding-top:4em;
+	font-size:2em;
+	margin:0.5em;
+	width:8em;
+	height:6em;
+	background:red;
+	font-weight: bold;
+}
+div .card1{
+	 background:#cccccc;
+}
+div .card2{
+	background:	#DCFA70;
+	color:#fff;
+
+}
+div .card3{
+	 background:#000;
+	 color:#DCFA70;
+}
+footer {
+
+    width: 100%;
+    background: #111;
+
+}
+footer ul {
+	margin:0;
+    padding: 1.25rem;
+    text-align: center;
+}
+footer ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.25rem 0.75rem;
+	font-weight: bold;
+
+}
+footer ul a {
+    color: #fff;
+    text-decoration: none;
+}
+footer ul a:hover {
+    text-decoration: underline;
+}
+
+
+footer p{
+	font-size:0.9em;
+	text-align:center;
+	margin:0 2em;
+	color: #454545;
+}
+
+footer .logo{
+	color:#fff;
+    font-weight: bold;
+	margin-bottom:0.5em;
+}

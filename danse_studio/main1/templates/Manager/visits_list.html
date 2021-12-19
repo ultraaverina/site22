@@ -1,0 +1,58 @@
+{% extends 'Manager/baseManager.html' %}
+{% block title %}Журнал{% endblock %}
+
+{%block content%}
+<div class="buttonSortA" style="margin-top:18px;display:inline-block;">
+		  <button onclick="myFunction()" class="buttonSort"> Сортировать по</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<form id="coCh-form" action="{% url 'visits_list' %}" method="POST" style="font-size:20px;">
+       		{% csrf_token %}
+                            <p>
+								<input type="radio" name="Sort" id="r1" value="sub" checked>
+								<label for="r1" style="display:inline-block">жопа</label>
+							</p>
+                            <p>
+								<input type="radio" name="Sort" id="r6" value="group">
+								<label for="r6" style="display:inline-block">Тираж</label>
+							</p>
+
+							<p>
+								<input type="radio" name="Sort" id="r2" value="dancer">
+								<label for="r2" style="display:inline-block">Дата договора</label>
+							</p>
+                <button class="btn btn-outline-dark " type="submit" name="sortButton">Поиск</button>
+			</form>
+		  </div>
+		</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Танцор</th>
+      <th scope="col">Абонемент</th>
+      <th scope="col">Занятие</th>
+      <th scope="col">Присутствие</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in ob %}
+
+  <tr>
+    <th scope="row">{{ forloop.counter }}</th>
+
+      <td>{{i.student_id}}<span>{{error}}</span></td>
+      <td>{{i.subscription_id}}<span>{{error}}</span> </td>
+      <td>{{i.schedule_id}}<span>{{error}}</span></td>
+      <td>{{i.presence}}<span>{{error}}</span></td>
+
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+</script>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'Manager/baseManager.html' %}
+{% block title %}Расписание{% endblock %}
+
+{%block content%}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Время</th>
+      <th scope="col">Группа</th>
+      <th scope="col">Преподаватель</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in ob %}
+
+  <tr>
+    <th scope="row">{{ forloop.counter }}</th>
+
+      <td>{{i.date}}</td>
+      <td>{{i.time}} </td>
+      <td>{{i.group_id}}</td>
+      <td>{{i.educator_id}}</td>
+
+  </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+
+
+
+
+
+
+
+{% endblock %}
