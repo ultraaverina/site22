@@ -3,26 +3,20 @@
 
 {%block content%}
 <div class="buttonSortA" style="margin-top:18px;display:inline-block;">
-		  <button onclick="myFunction()" class="buttonSort"> Сортировать по</button>
-		  <div id="myDropdown" class="dropdown-content">
-			<form id="coCh-form" action="{% url 'visits_list' %}" method="POST" style="font-size:20px;">
+
+
+			<form id="coCh-form" action="{% url 'visits_list' %}" method="POST" style="font-size:20px;margin:10px;">
        		{% csrf_token %}
-                            <p>
+                <div style="display:flex;">
+                            <p style="margin:10px;">
 								<input type="radio" name="Sort" id="r1" value="sub" checked>
-								<label for="r1" style="display:inline-block">жопа</label>
-							</p>
-                            <p>
-								<input type="radio" name="Sort" id="r6" value="group">
-								<label for="r6" style="display:inline-block">Тираж</label>
+								<label for="r1" style="display:inline-block">Присутствие</label>
 							</p>
 
-							<p>
-								<input type="radio" name="Sort" id="r2" value="dancer">
-								<label for="r2" style="display:inline-block">Дата договора</label>
-							</p>
-                <button class="btn btn-outline-dark " type="submit" name="sortButton">Поиск</button>
+                <button style="" class="btn btn-info " type="submit" name="sortButton">Поиск</button>
+                </div>
 			</form>
-		  </div>
+
 		</div>
 <table class="table table-striped">
   <thead>
@@ -49,10 +43,11 @@
   {% endfor %}
   </tbody>
 </table>
-<script>
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+<form class="form-inline" style="margin:2% 0;">
+<a href="{%url 'add_student'%}" role="button" class="btn btn-info " style="margin:0 2%"><li style="list-style:none;">Добавить посещение</li></a>
+</form>
+{% endblock %}
 
-</script>
+{% block script %}
+
 {% endblock %}

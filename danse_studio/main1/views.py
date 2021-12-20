@@ -6,7 +6,7 @@ from django.views.generic import View, FormView, DetailView, UpdateView, DeleteV
 from django.contrib.auth import logout, login
 from django.shortcuts import render, redirect, get_object_or_404
 from .baza import autoriz, sort_id
-from .forms import UserForm, StudentForm, SearchForm
+from .forms import UserForm, StudentForm, SearchForm, timetableForm, subscriptionForm
 from .models import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
@@ -207,12 +207,6 @@ class Visits_ListView(View):
 
 
 
-
-
-
-
-
-
 class Subscription_ListView(View):
     def get(self, request):
         search_query = request.GET.get("q")
@@ -220,7 +214,7 @@ class Subscription_ListView(View):
             sub = Subscription.objects.all()
         else:
             sub = Subscription.objects.filter(
-                student_id__contains=search_query
+                price__contains=search_query
             )
         context = {
             'sub': sub
@@ -276,3 +270,33 @@ class TimetableStudent_ListView(View):
 
         }
         return render(request, 'Student/student_timetable.html', context=context)
+def add_timetable(request):
+    error = ''
+    if request.method == 'POST':
+        form = timetableForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = 'Поля заполненны не верно!'
+    form = timetableForm()
+    context = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'Manager/add_timetable.html', context=context)
+
+
+def add_subscription(request):
+    error = ''
+    if request.method == 'POST':
+        form = subscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            error = 'Поля заполненны не верно!'
+    form = subscriptionForm()
+    context = {
+        'form': form,
+        'error': error
+    }
+    return render(request, 'Manager/add_subscription.html', context=context)

@@ -25,6 +25,8 @@ urlpatterns = [
     path('subscription', SubscriptionStudent_ListView.as_view(), name='subscription'),
     path('logout', views.logout, name='logout'),
     path('student_timetable', TimetableStudent_ListView.as_view(), name='student_timetable'),
+    path('add_timetable', views.add_timetable, name='add_timetable'),
+    path('add_subscription', views.add_subscription, name='add_subscription'),
 
 
 

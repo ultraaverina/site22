@@ -44,3 +44,36 @@ class StudentForm(ModelForm):
         skill_level = forms.ChoiceField()
 class SearchForm(forms.Form):
     query = forms.CharField()
+
+class timetableForm(ModelForm):
+    class Meta:
+        model =Schedule
+        fields = ['date', 'time', 'group_id','educator_id']
+
+        date = forms.DateField(widget=forms.TextInput(attrs={'class': 'form-control'}))
+        time = forms.TimeField()
+
+        group_id = forms.ModelChoiceField(
+            queryset=Style.objects.all(),
+
+        ),
+        educator_id = forms.ModelChoiceField(
+            queryset=Educator.objects.all(),)
+
+
+class subscriptionForm(ModelForm):
+    class Meta:
+        model =Subscription
+        fields = ['number_of_lessons', 'price', 'student_id', 'group_id','manager_id']
+
+        number_of_lessons = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}))
+        price=forms.IntegerField()
+
+        student_id = forms.ModelChoiceField(
+            queryset=Student.objects.all(), )
+        group_id = forms.ModelChoiceField(
+            queryset=Style.objects.all(),)
+
+        manager_id = forms.ModelChoiceField(
+            queryset=Manager.objects.all(),)
+

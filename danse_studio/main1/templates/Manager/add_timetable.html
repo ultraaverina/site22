@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" type="text/css">
+    <link rel="stylesheet" href="../../dist/css/bootstrap.min.css"  type="text/css">
+
+
+    <meta charset="UTF-8">
+    <title>Добавить расписание</title>
+    <link rel="shortcut icon" href="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/200px-Heart_coraz%C3%B3n.svg.png" type="image/x-icon">
+    <style type="text/css">
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue","Lucida Grande", sans-serif;
+    margin: 0;
+     background: #fafafa;
+}
+.logo{
+
+	font-size: 2em;
+
+
+}
+.header{
+    width:100%;
+	padding: 0 1em;
+	color: #ffffff;
+    font-size: 1em;
+   font-weight: bold;
+	background:black;
+
+}
+.placeholder{
+    width:100%;
+    display:flex;
+	justify-content:space-between;
+
+}
+.navbar{
+  margin:0;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+
+#sidebar {
+    width: 250px;
+
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    background: #727c85;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6c757d!important;;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 2px solid #6c757d;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+}
+
+    </style>
+</head>
+<body>
+<div class="header">
+ <div class="placeholder">
+     <p class="logo" style="align-self:center;">ТАНЦЫ</p>
+    <div class="hello_text" style="align-self:center;"><i>Танцы — перпендикулярное выражение горизонтальных желаний</i></div>
+     <div ><img  src="http://127.0.0.1:8000/static/img/qwa.png" alt="Лого"></div>
+
+ </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary text-white" style="margin:0">
+   <a href="{%url 'logout'%}" class="btn btn-outline-light" role="button" >Выход</a>
+
+
+</nav>
+<div class="main_space" style="display:flex;">
+   <div class="wrapper" >
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+
+                </div>
+               <ul class="list-unstyled components">
+                    <li>
+                        <a href="{%url 'students_list'%}">Студенты</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'teachers_list'%}">Педагоги</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'visits_list'%}">Журнал</a>
+                    </li>
+
+                    <li>
+                        <a href="{%url 'subscription_list'%}">Абонементы</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'timetable_list'%}">Расписание</a>
+                    </li>
+                </ul>
+
+
+            </nav>
+
+       </div>
+
+    <div style="padding:2em 3em;" class="float-left">
+        <h1 style="color:#2e2e2e">Добавление расписания</h1><br>
+         <form  method="post" class="form-group" style="margin-left:2%; ">
+
+         {% csrf_token %}
+
+
+              {% for field in form %}
+                        <label >{{ field.label }}</label><div ><span>{{error}}</span></label>{{field}}</div><br>
+              {% endfor %}
+              <button class="btn btn-success" type="submit">Добавить расписание</button>
+</form>
+
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
